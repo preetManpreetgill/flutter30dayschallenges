@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:flutter30dayschallenges/pages/day8.dart';
 
 class HomePage extends StatelessWidget {
-  const HomePage({Key? key}) : super(key: key);
+  final UserData userData;
+  const HomePage({Key? key, required this.userData}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -24,7 +26,7 @@ class HomePage extends StatelessWidget {
             ),
 
             child: Text(
-              'flutter 30 days challenges',
+              "userName:${userData.userName},userId:${userData.userId}",
               style: TextStyle(
                   fontSize: 20,
                   color: Colors.white,
