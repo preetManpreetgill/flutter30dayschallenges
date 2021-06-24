@@ -1,7 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter30dayschallenges/pages/day8.dart';
+import 'package:flutter30dayschallenges/pages/grid_view_example.dart';
 import 'package:flutter30dayschallenges/pages/home_page.dart';
+import 'package:flutter30dayschallenges/pages/list_view_builder_example.dart';
+import 'package:flutter30dayschallenges/pages/list_view_example.dart';
 import 'package:flutter30dayschallenges/pages/login_page.dart';
+import 'package:flutter30dayschallenges/pages/page_view_builder_example.dart';
 import 'package:flutter30dayschallenges/pages/sign_up_page.dart';
 
 class OnGenerateRoute {
@@ -9,7 +13,7 @@ class OnGenerateRoute {
     final args = settings.arguments;
 
     if (settings.name == "/") {
-      return MaterialPageRoute(builder: (context) => Day8());
+      return MaterialPageRoute(builder: (context) => PageViewBuilderExample());
     } else if (settings.name == "/signUpPage") {
       return MaterialPageRoute(builder: (context) => SignUpPage());
     } else if (settings.name == "/login") {
