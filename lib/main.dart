@@ -3,6 +3,7 @@ import 'package:flutter30dayschallenges/pages/day3.dart';
 import 'package:flutter30dayschallenges/pages/day4.dart';
 import 'package:flutter30dayschallenges/pages/day5.dart';
 import 'package:flutter30dayschallenges/pages/day6.dart';
+import 'package:flutter30dayschallenges/pages/day7.dart';
 import 'package:flutter30dayschallenges/pages/home_page.dart';
 import 'package:flutter30dayschallenges/pages/image_page.dart';
 import 'package:flutter30dayschallenges/pages/login_page.dart';
@@ -18,10 +19,25 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return  MaterialApp(
+      theme: ThemeData(
+        primarySwatch: Colors.blueGrey
+      ),
+      themeMode: ThemeMode.light,
+      darkTheme: ThemeData(
+        brightness: Brightness.dark,
+      ),
+      initialRoute: "/Day7",
+      routes: {
+        "/":(context) => HomePage(),
+        "/login": (context) => LoginPage(),
+        "/signUpPage": (context) => SignUpPage(),
+        "/Day7": (context) => Day7(),
+      },
       debugShowCheckedModeBanner: false,
-      home: MyStatefulWidget()
+      //home: MyStatefulWidget()
     );
   }
+
   }
 
 
