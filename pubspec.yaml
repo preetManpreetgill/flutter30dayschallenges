@@ -24,6 +24,9 @@ dependencies:
   flutter:
     sdk: flutter
   fluttericon: ^2.0.0
+  simple_animations: ^3.1.1
+  supercharged: ^2.0.0
+
 
 
 
