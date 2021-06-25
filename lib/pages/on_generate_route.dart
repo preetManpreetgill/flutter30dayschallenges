@@ -13,13 +13,14 @@ import 'package:flutter30dayschallenges/pages/list_view_example.dart';
 import 'package:flutter30dayschallenges/pages/login_page.dart';
 import 'package:flutter30dayschallenges/pages/page_view_builder_example.dart';
 import 'package:flutter30dayschallenges/pages/sign_up_page.dart';
+import 'package:flutter30dayschallenges/pages/youtube_search/youtube_search_page.dart';
 
 class OnGenerateRoute {
   static Route<dynamic>? route(RouteSettings settings) {
     final args = settings.arguments;
 
     if (settings.name == "/") {
-      return MaterialPageRoute(builder: (context) => AnimatedDrawerHome());
+      return MaterialPageRoute(builder: (context) => YoutubeSearchPage());
     } else if (settings.name == "/signUpPage") {
       return MaterialPageRoute(builder: (context) => SignUpPage());
     } else if (settings.name == "/login") {
