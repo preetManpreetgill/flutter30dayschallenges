@@ -4,10 +4,10 @@ import 'package:flutter30dayschallenges/pages/youtube_search/models/thumbnails_d
 
 class Thumbnails{
 
-  final ThumbnailsData? medium;
-  final ThumbnailsData? high;
+  final ThumbnailsData medium;
+  final ThumbnailsData high;
 
-  Thumbnails({this.medium, this.high});
+  Thumbnails({required this.medium, required this.high});
 
   factory Thumbnails.fromJson(Map<String,dynamic>json){
     return Thumbnails(

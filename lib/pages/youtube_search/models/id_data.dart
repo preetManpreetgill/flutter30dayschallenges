@@ -1,15 +1,15 @@
 
 
 class IdData{
-  final String? kind;
-  final String? channelId;
+  final String kind;
+  final String? videoId;
 
-  IdData({this.kind, this.channelId});
+  IdData({required this.kind, required this.videoId});
 
   factory IdData.fromJson(Map<String,dynamic>json){
     return IdData(
       kind: json['kind'],
-      channelId: json['channelId'],
+      videoId: json['videoId'],
 
     );
   }

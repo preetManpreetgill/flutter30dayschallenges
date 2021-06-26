@@ -4,22 +4,22 @@ import 'package:flutter30dayschallenges/pages/youtube_search/models/thumbnails.d
 
 class SnippetData{
  final String? publishedAt;
- final String? channelId;
- final String? title;
- final String? description;
- final String? channelTitle;
- final String? liveBroadcastContent;
- final String? publishTime;
- final Thumbnails? thumbnails;
+ final String channelId;
+ final String title;
+ final String description;
+ final String channelTitle;
+ final String liveBroadcastContent;
+ final String publishTime;
+ final Thumbnails thumbnails;
 
-  SnippetData({this.thumbnails,
-      this.publishedAt,
-      this.channelId,
-      this.title,
-      this.description,
-      this.channelTitle,
-      this.liveBroadcastContent,
-      this.publishTime});
+  SnippetData({required this.thumbnails,
+      required this.publishedAt,
+      required this.channelId,
+      required this.title,
+      required this.description,
+      required this.channelTitle,
+      required this.liveBroadcastContent,
+      required this.publishTime});
 
   factory SnippetData.fromJson(Map<String,dynamic>json){
     return SnippetData(

@@ -2,9 +2,9 @@
 
 class ThumbnailsData{
 
-  final String? url;
+  final String url;
 
-  ThumbnailsData({this.url});
+  ThumbnailsData({required this.url});
 
   factory ThumbnailsData.fromJson(Map<String,dynamic>json){
      return ThumbnailsData(

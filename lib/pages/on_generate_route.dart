@@ -13,6 +13,8 @@ import 'package:flutter30dayschallenges/pages/list_view_example.dart';
 import 'package:flutter30dayschallenges/pages/login_page.dart';
 import 'package:flutter30dayschallenges/pages/page_view_builder_example.dart';
 import 'package:flutter30dayschallenges/pages/sign_up_page.dart';
+import 'package:flutter30dayschallenges/pages/youtube_search/models/item.data.dart';
+import 'package:flutter30dayschallenges/pages/youtube_search/play_video.dart';
 import 'package:flutter30dayschallenges/pages/youtube_search/youtube_search_page.dart';
 
 class OnGenerateRoute {
@@ -21,7 +23,22 @@ class OnGenerateRoute {
 
     if (settings.name == "/") {
       return MaterialPageRoute(builder: (context) => YoutubeSearchPage());
-    } else if (settings.name == "/signUpPage") {
+    } else if(settings.name=="/playVideo") {
+      if (args is ItemData) {
+        return MaterialPageRoute(builder: (context) => PlayVideo(item: args,));
+      }else{
+        return MaterialPageRoute(
+            builder: (context) => Scaffold(
+              appBar: AppBar(
+                title: Text('error'),
+              ),
+              body: Center(
+                child: Text("Error"),
+              ),
+            ));
+      }
+    }
+    else if (settings.name == "/signUpPage") {
       return MaterialPageRoute(builder: (context) => SignUpPage());
     } else if (settings.name == "/login") {
       return MaterialPageRoute(builder: (context) => LoginPage());
