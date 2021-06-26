@@ -1,5 +1,8 @@
+import 'dart:convert';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
+import 'package:flutter30dayschallenges/pages/youtube_search/models/youtube_search_model.dart';
 
   class YoutubeSearchPage extends StatefulWidget {
   const YoutubeSearchPage({Key? key}) : super(key: key);
@@ -12,6 +15,20 @@ class _YoutubeSearchPageState extends State<YoutubeSearchPage> {
 
     bool _isSearch = false;
     int navIndex =0;
+
+    @override
+    void initState(){
+      super.initState();
+      _loadMockDataFromAssets();
+    }
+
+    Future<void> _loadMockDataFromAssets()async {
+      final assetsData = await rootBundle.loadString("assets/youtube_search.json");
+      final response = YoutubeSearchModel.fromJson(json.decode(assetsData));
+      print(response.items[0].id.channelId);
+      print(response.items[0].snippet.title);
+      print(response.items[0].snippet.thumbnails!.medium!.url);
+    }
 
     Widget _searchWidget(){
       return Row(
